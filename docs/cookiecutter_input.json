@@ -1,0 +1,6 @@
+{
+    "_template": "https://github.com/traiana/cookiecutter-pytest-project.git",
+    "project_name": "Avanan",
+    "project_short_description": "Home assignment for Avanan",
+    "sphinx_theme": "sphinx-rtd-theme"
+}

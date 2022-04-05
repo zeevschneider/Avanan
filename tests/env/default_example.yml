@@ -1,0 +1,9 @@
+kafka_consumer:
+  bootstrap_servers: 10.154.25.66:9092
+  topic: fx.parser.messages.enriched
+
+kafka_producer:
+  bootstrap_servers:
+    10.154.23.234:9092
+    10.154.23.146:9092
+  topic: fx.parser.messages.in

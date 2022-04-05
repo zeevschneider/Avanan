@@ -1,0 +1,29 @@
+artifacts:
+  - name: Avanan
+    type: image
+    image:
+      dockerfile: Dockerfile
+      description: Home assignment for Avanan
+
+templates:
+  - name:
+    description:
+    artifact: Avanan
+    requires:
+      apis:
+        - ref:
+            api:
+            version:
+            protocol:
+          configKey:
+      resources:
+        - ref:
+            type: postgresqlSchema
+            resource: autotestresults
+          configKey: postgrase-test-reults
+          accessMode: rw
+        - ref:
+            type: bucketStorage
+            resource: aut-test-bucket
+          configKey: aut-test-bucket
+          accessMode: rw
