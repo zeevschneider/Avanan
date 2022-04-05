@@ -1,21 +1,7 @@
---index-url https://repo.okro.blue/artifactory/api/pypi/traiana-pypi/simple
-
-attrs==18.1.0
-importlib-metadata==1.7.0
-iniconfig==1.0.1
-more-itertools==4.3.0
-packaging==17.1
 pluggy==0.13.1
-py==1.9.0
-pyparsing==2.2.0
 pytest==6.0.1
 pytest-sugar==0.9.4
-PyYAML==3.13
-six==1.11.0
-termcolor==1.1.0
-toml==0.10.1
-tox==3.1.2
 virtualenv==16.0.0
-zipp==3.1.0
-okro-python==master-20200820-7af408a2
-sinker==master-20200820-69ac069f
+selenium==3.141.0
+webdriver_manager
+requirements
