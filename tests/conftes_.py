@@ -2,7 +2,6 @@
 
 import logging
 import pytest
-from .support.env_util import init_env
 from py.xml import html
 
 
@@ -16,12 +15,12 @@ def pytest_addoption(parser):
         "--logging-file", dest=dest, default=default_log_file, help=desc,
     )
     parser.addini(dest, desc, default=default_log_file)
-
-
-def pytest_configure(config):
-    """Add the formatter to logging. """
-    log_file = config.getini("logging_file") or config.getvalue("logging_file")
-    logging.root.addHandler(logging.FileHandler(log_file))
+#
+#
+# def pytest_configure(config):
+#     """Add the formatter to logging. """
+#     log_file = config.getini("logging_file") or config.getvalue("logging_file")
+#     logging.root.addHandler(logging.FileHandler(log_file))
 
 
 def pytest_itemcollected(item):
@@ -58,13 +57,3 @@ def pytest_html_results_table_row(report, cells):
     desc, loc = report.nodeid.split(" ", 1)
     cells.insert(2, html.td(desc))
     cells[1] = html.td(loc)
-
-
-@pytest.fixture(scope="session", autouse=True)
-def init_environment():
-    """
-    this fixture will get env parameter and pass it to init env function
-    that will init env parameters
-    :return:
-    """
-    init_env()
